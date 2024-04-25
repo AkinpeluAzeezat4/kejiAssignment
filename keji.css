@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0 auto;
+    padding-top: 34px;
+    font-family: "Roboto", sans-serif;
+  }
+  header {
+    width: 85%;
+    margin: 0 auto;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    margin-bottom: 3rem;
+  }
+  header nav .list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: rgb(43, 43, 77);
+    font-size: 13px;
+  }  
+ ul{
+    display: flex;
+ }
+ ul li{
+    margin-left: 4rem;
+ }
+ .input{
+    margin-left: 10rem;
+ }
+ h2{
+    margin-left: 10rem;
+ }
+ .me{
+    width:50%;
+    margin-left: 10rem;
+    height: 120vh;
+    margin-bottom: 10rem;
+ }

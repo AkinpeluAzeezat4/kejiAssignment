@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    DECEMBER 2024
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024 Calendar - DECEMBER</title>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+    th {
+        background-color: white(251, 249, 249);
+    }
+    .highlight {
+        background-color: rgb(0, 195, 255);
+    }
+</style>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+    </thead>
+    <tbody id="calendar-body"></tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    var date = new Date(2024, 0, 1); // December 1, 2024
+    var end_date = new Date(2024, 0, 31); // December 31, 2024
+
+    var tbody = $('#calendar-body');
+
+    while (date <= end_date) {
+        var row = $('<tr></tr>');
+
+        for (var i = 0; i < 7; i++) {
+            if (date.getMonth() === 0 && date.getDate() === 2) {
+                row.append('<td class="highlight">' + date.getDate() + '</td>');
+            } else {
+                row.append('<td>' + date.getDate() + '</td>');
+            }
+
+            date.setDate(date.getDate() + 1);
+        }
+
+        tbody.append(row);
+    }
+});
+</script>
+
+</body>
+</html>
